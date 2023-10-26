@@ -47,7 +47,7 @@ const NewPostPage = () => {
             setTitle('');
             setContent('');
             alert('Post succesfully submitted!');
-            navigate(`/${forumId}/subjects/${subjectId}/posts/${newPostId}`)
+            navigate(`/${forumId}/${subjectId}/${newPostId}`)
         }
     };
 

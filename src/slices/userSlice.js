@@ -17,26 +17,29 @@ const userSlice = createSlice({
   reducers: {
     register: (state, action) => {
       const username = action.payload;
-      if (!state.authorizedUsernames.includes(username)) {
+      const usernameExists = state.authorizedUsernames.some(registeredUsername => registeredUsername.toLowerCase() === username.toLowerCase());
+
+      if (!usernameExists) {
         state.authorizedUsernames.push(username);
-      }
-      else {
-        alert("This username is already registered!")
+      } else {
+        return
       }
       localStorage.setItem('user', JSON.stringify(state));
     },
+
     login: (state, action) => {
       const username = action.payload;
-      if (state.authorizedUsernames.includes(username)) {
-        console.log(username)
-        state.currentUser = username; // You can expand this object with more user details as needed
+      const usernameExists = state.authorizedUsernames.some(registeredUsername => registeredUsername === username);
+
+      if (usernameExists) {
+        state.currentUser = username;
         state.isAuthenticated = true;
-      }
-      else {
-        alert("This username is not registered! Please register first before proceeding.")
+      } else {
+        return;
       }
       localStorage.setItem('user', JSON.stringify(state));
     },
+
     logout: state => {
       state.currentUser = null;
       state.isAuthenticated = false;
@@ -61,7 +64,11 @@ export const selectIsAuthenticated = state => state.user.isAuthenticated;
 export const selectCurrentUser = state => state.user.currentUser;
 
 // Check if a specific username is authorized (has registered)
-export const isUsernameAuthorized = (state, username) => state.user.authorizedUsernames.includes(username);
+export const isUsernameAuthorized = (state, username) => {
+  console.log(state.user.authorizedUsernames)
+  return   state.user.authorizedUsernames.includes(username);
+}
+
 
 export const selectAllUsers = (state) => state.user.authorizedUsernames;
 

@@ -14,11 +14,12 @@ function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<HomePage />} />
-                    <Route path='/favorites' element={<FavoritesPage />}/>
-                    <Route path=":forumId/subjects" element={<SubjectsPage />} />
-                    <Route path=":forumId/subjects/:subjectId/posts" element={<PostsPage />} />
-                    <Route path=':forumId/subjects/:subjectId/newpost' element={<NewPostPage />} />
-                    <Route path=":forumId/subjects/:subjectId/posts/:postId" element={<SinglePostPage />} />
+                    <Route path='favorites' element={<FavoritesPage />}/>
+                    <Route path="favorites/:postId" element={<SinglePostPage />} />
+                    <Route path=":forumId" element={<SubjectsPage />} />
+                    <Route path=":forumId/:subjectId" element={<PostsPage />} />
+                    <Route path=':forumId/:subjectId/newpost' element={<NewPostPage />} />
+                    <Route path=":forumId/:subjectId/:postId" element={<SinglePostPage />} />
                     <Route path="/search/:postId" element={<SinglePostPage />} />
                 </Route>
                 <Route path='/register' element={<RegisterAndLogin actionType='register' />}/>

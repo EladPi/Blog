@@ -1,16 +1,32 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation, useParams } from 'react-router-dom';
+import { selectAllForums } from '../../slices/forumsSlice';
+import { selectSubjectsForForum } from '../../slices/forumsSlice';
+import { selectPostById } from '../../slices/postsSlice';
+import { useSelector } from 'react-redux';
 
-const routes = {
-    '/': 'Home',
-    '/forum': 'Forums',
-    // ... add other routes and their display names
-};
+
 
 function ProgressBar() {
     const location = useLocation();
     const pathnames = location.pathname.split('/').filter((x) => x);
-    console.log(location)
+    const { forumId, subjectId, postId } = useParams();
+
+    const actualForumId = forumId || '';
+    const actualSubjectId = subjectId || '';
+    const actualPostId = postId || '';
+
+    const allForums = useSelector(selectAllForums);
+    const subjectForForum = useSelector(state => selectSubjectsForForum(state, forumId));
+    const postById = useSelector(state => selectPostById(state, postId));
+
+    const routes = {
+        '/': 'Home',
+        [actualForumId]: allForums[actualForumId] ? allForums[actualForumId].name : undefined,
+        [actualSubjectId]: subjectForForum ? subjectForForum.name : undefined,
+        [actualPostId]: postById ? postById.title : undefined,
+    };
+    
     return (
         <div className="breadcrumb">
             <Link to="/">Home</Link>

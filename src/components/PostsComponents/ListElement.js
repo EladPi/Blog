@@ -7,11 +7,11 @@ function ListElement({ item, type }) {
   let navigateToPath = "";
 
   if (type === 'Forums') {
-    navigateToPath = `/${slugify(item.id)}/subjects`;
+    navigateToPath = `/${slugify(item.id)}`;
   } 
   else if (type === 'Subjects') {
     // Assuming a structure where posts are identified by subject ID
-    navigateToPath = `/${slugify(item.forumId)}/subjects/${slugify(item.id)}/posts`;
+    navigateToPath = `/${slugify(item.forumId)}/${slugify(item.id)}`;
   }
 
   return (

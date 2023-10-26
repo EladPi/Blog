@@ -9,7 +9,7 @@ const AddPost = () =>{
     
     return(
         <>
-        <Link to={`/${forumId}/subjects/${subjectId}/newpost `}>
+        <Link to={`/${forumId}/${subjectId}/newpost `}>
             <button className="addpost-button">
                 New Post
             </button>

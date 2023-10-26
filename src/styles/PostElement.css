@@ -51,6 +51,14 @@
 }
 
 .addpost-button{
-    color: red;
+    background-color: #5483B3;
+    border: 1px solid darkgray;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
+.addpost-button:hover{
+    background-color: #7DA0CA;
+}
