@@ -1,0 +1,19 @@
+.favorite-button-div{
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    margin-top: -2rem; /* Adjust as needed */
+}
+
+.favorite-button{
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 500;
+}
+
+.favorite-button:hover{
+    transform: scale(1.2);
+}

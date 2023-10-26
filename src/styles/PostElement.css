@@ -1,0 +1,56 @@
+.post-element-link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.post-element-li{
+    transition: all 0.2s;
+    max-height: 120px;
+    border-bottom: 1px solid lightgray;
+    list-style-type:none;
+    padding-bottom: 5px;
+}
+
+
+
+.post-element-author-favorite-div{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.post-element-author{
+    border-bottom: 1px solid lightgray;
+    font-size: 0.7em;
+    margin-left: 4px;
+}
+
+.post-element-li:hover{
+    background-color: aliceblue;
+}
+
+
+.post-element-title-content-div{
+    display: flex;
+    
+    flex-direction: column;
+    margin-top: -1.2em;
+}
+
+.post-element-title{
+    font-size: 1.2rem;
+    
+    padding-left: 0.5em;
+}
+
+.post-element-content{
+    
+    margin-top: -1em;
+    padding-left: 1.2em;
+
+}
+
+.addpost-button{
+    color: red;
+}
+

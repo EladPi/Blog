@@ -1,0 +1,22 @@
+.posts-page-div{
+    border: 1px solid lightgray;
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    border-radius: 6px;
+    padding: 20px;
+    
+}
+
+
+.posts-list-ul{
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+

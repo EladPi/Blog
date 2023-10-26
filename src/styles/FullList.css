@@ -1,0 +1,36 @@
+.full-list {
+    max-width: 1020px; /* Adjust to your preference */
+    margin: auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .list-title {
+    margin-top: 0px;
+    margin-bottom: 2rem;
+    margin-left: 2px;
+    text-align: start;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Smaller screens: Tablets, some large phones (max-width: 768px) */
+  @media only screen and (max-width: 769px) {
+    .list-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Larger screens: Laptops, Desktops (min-width: 769px) */
+  @media only screen and (min-width: 768px) {
+    .list-title {
+      font-size: 1.5rem;
+    }
+  }
+  
