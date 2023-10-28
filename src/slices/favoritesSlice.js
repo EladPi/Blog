@@ -37,9 +37,6 @@ const favoritesSlice = createSlice({
     addFavorite: (state, action) => {
       const { userId, postId } = action.payload;
 
-      console.log('state:', state);
-      console.log('action:', action);
-
       if (!state.users[userId]) {
         state.users[userId] = [];
       }

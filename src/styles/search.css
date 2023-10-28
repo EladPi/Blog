@@ -1,11 +1,17 @@
-.search-bar{
+.search-bar {
     border-radius: 8px;
-    border: 1px solid darkgrey;
+    border: 1.5px solid darkgrey;
     height: 1.6rem;
     width: 12rem;
+    transition: border-color 0.2s;
 }
 
-.search-button{
+.search-bar:focus {
+    outline: none;
+    border-color: #7DA0CA;
+}
+
+.search-button {
     border: none;
     position: relative;
     top: 0.2rem;
@@ -14,77 +20,76 @@
     transition: all 0.1s;
 }
 
-.search-button:hover{
+.search-button:hover {
     transform: scale(1.1);
 }
 
-.search-icon{
-    max-width: 25px;
-}
 
-/* ... your existing styles ... */
-
-/* Container Styles */
 .search-container {
-    position: relative; /* Makes sure our absolute-positioned dropdown relates to this container */
-    display: inline-block; /* Only take up as much space as it needs */
+    position: relative;
+    display: inline-block;
 }
 
 .search-bar-results-div {
     position: absolute;
-    top: 2rem; /* pushes the div right below the search bar */
+    top: 2rem;
     left: 0;
-    width: 100%; /* make it the full width of the parent container (.search-container) */
+    width: 100%;
     max-height: 300px;
-    overflow-y: auto; /* make it scrollable */
+    overflow-y: auto;
     z-index: 500;
     background-color: aliceblue;
-    
-    border-radius: 5px; /* optional rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar-results-div ul{
+.search-bar-results-div ul {
     list-style: none;
     margin-left: -39px;
     width: fit-content;
     margin-bottom: 0px;
     margin-top: 0px;
-    
+
 }
 
-/* List item styles */
 .search-rersults-li {
-    cursor: pointer; /* indicate clickable */
+    cursor: pointer;
 }
 
 .search-bar-results-div li:last-child {
-    border-bottom: 1px solid darkgray; /* remove border for the last item */
+    border-bottom: 1px solid darkgray;
     transition: all 0.2s;
 }
 
 
 .search-bar-results-div li:hover {
-    background-color: rgb(224, 231, 238) /* highlight item on hover */
+    background-color: rgb(224, 231, 238)
 }
 
-.search-post-title{
+.search-post-title {
     margin-top: 0px;
     padding-top: 5px;
     padding-left: 5px;
 }
 
-.search-post-content{
+.search-post-content {
     margin-top: -10px;
     padding-left: 5px;
 }
 
-
-a{
-    text-decoration: none;
+.searchpage-div {
+    max-width: 1020px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    border-radius: 4px;
+    padding: 8px 10px 8px 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
-
-
-
+a {
+    text-decoration: none;
+}

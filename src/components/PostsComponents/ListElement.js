@@ -1,7 +1,6 @@
-import React from 'react';
-import '../../styles/ListElement.css';
 import { Link } from 'react-router-dom';
 import { slugify } from '../../utils/slugify';
+import '../../styles/ListElement.css';
 
 function ListElement({ item, type }) {
   let navigateToPath = "";
@@ -10,7 +9,6 @@ function ListElement({ item, type }) {
     navigateToPath = `/${slugify(item.id)}`;
   } 
   else if (type === 'Subjects') {
-    // Assuming a structure where posts are identified by subject ID
     navigateToPath = `/${slugify(item.forumId)}/${slugify(item.id)}`;
   }
 

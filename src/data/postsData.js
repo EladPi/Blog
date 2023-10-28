@@ -1,18 +1,4 @@
-/*
-    Creating the posts data here instead of in the slice,
-    to keep the clean code and allow the slice to focus only
-    on functionallity.
-
-    Currently, all the posts are written by 7 differents authors:
-    Author1, Author2 ... Author7.
-
-
-    I added every ID of a post manually to allIds,
-    in the future, i need to look for an option to 
-    literate through the byId obj array and add every
-    id into allIds. Maype with Array.map()
-*/
-
+// initial Data containing all the posts on the website.
 export const postsData = {
     byId: {
         "post1":

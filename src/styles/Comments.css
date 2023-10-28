@@ -76,7 +76,7 @@
     font-size: 1.2rem;
 }
 
-.comments-comment-form textarea:focus{
+.comments-comment-form textarea:focus {
     border-color: #007BFF;
     outline: none;
 }
@@ -97,5 +97,3 @@
     cursor: pointer;
     transition: all 0.2s;
 }
-
-

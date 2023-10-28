@@ -1,4 +1,7 @@
-/* NewPostPage.css */
+textarea {
+    resize: none;
+}
+
 
 .newpostpage-form {
     max-width: 1020px;
@@ -11,6 +14,7 @@
 
 .newpostpage-form div {
     margin: 20px 0;
+    margin-bottom: 0px;
 }
 
 .newpostpage-form label {
@@ -39,7 +43,6 @@
 
 .newpostpage-form textarea {
     height: 150px;
-    resize: vertical;
 }
 
 .newpostpage-form button {
@@ -53,6 +56,15 @@
     transition: background-color 0.3s ease;
 }
 
+.newpostpage-form span{
+    color: red;
+    font-size: 0.8em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
 .newpostpage-form button:hover {
-    background-color: #7DA0CA; /* Darken the button a bit on hover */
+    background-color: #7DA0CA;
 }

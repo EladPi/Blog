@@ -1,5 +1,3 @@
-// Favorite button in the single post .
-
 import '../../styles/Favorite.css'
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';

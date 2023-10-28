@@ -1,4 +1,3 @@
-import React from 'react';
 import PostElement from './PostElement';
 import '../../styles/PostsList.css';
 

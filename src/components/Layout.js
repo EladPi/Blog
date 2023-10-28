@@ -15,7 +15,7 @@ export default function Layout({ children }) {
     return (
         <>
             <header className="blog-title-header">
-                <Link to={'/'}> <h1 className="blog-title">My Blog</h1> </Link>
+                 <h1 className="blog-title"><Link className="blog-title-link" to={'/'}>My Blog</Link></h1>
             </header>
             <div className="bottom-bar">
                 <SearchBar />

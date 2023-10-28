@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { selectAllForums } from '../../slices/forumsSlice';
 import { selectSubjectsForForum } from '../../slices/forumsSlice';

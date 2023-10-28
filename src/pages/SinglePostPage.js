@@ -1,4 +1,3 @@
-// The single post page.
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectPostById } from "../slices/postsSlice";
@@ -8,15 +7,17 @@ import EditPost from "../components/UI/EditPost";
 import { selectCurrentUser } from "../slices/userSlice";
 import '../styles/SinglePostPage.css'
 
+
+
 const SinglePostPage = () => {
-    const { postId} = useParams();
+    const { postId } = useParams();
     const postById = useSelector(state => selectPostById(state, postId)) // checks if the post exist in the database.
     const currentUser = useSelector(selectCurrentUser);
 
     return (
 
         <>
-            {postById == undefined ? <div className="singpostpage-postnotfound-div">Error 404 . <br /> Post not found.</div>
+            {postById == undefined ? <div className="singlepostpage-postnotfound-div">Error 404 . <br /> Post not found.</div>
                 :
                 <>
                     <div className="post-div">

@@ -1,4 +1,4 @@
-// data/subjectsData.js
+// Initial data for the subjects.
 
 export const subjectsData = {
     byId: {

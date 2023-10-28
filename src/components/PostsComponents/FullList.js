@@ -1,12 +1,9 @@
-//Represent a full list of posts/subjects/forums
-
-import React from 'react';
-import ListElement from './ListElement'; // Ensure that this component is created
+import ListElement from './ListElement';
 import '../../styles/FullList.css';
 
 function FullList({ items, type }) {
   // 'items' is the array of posts/subjects/forums to be displayed
-  // 'type' helps us conditionally render UI or logic specific to posts/subjects/forums if needed
+  // 'type' helps conditionally render UI or logic specific to subjects/forums.
 
   return (
     <div className="full-list">

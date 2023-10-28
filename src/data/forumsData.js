@@ -1,4 +1,4 @@
-// Data containing all the forums in the website.
+// Initial data containing all the forums in the website.
 
 export const forumsData = {
     byId: {

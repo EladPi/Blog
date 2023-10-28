@@ -24,8 +24,9 @@ const store = configureStore({
 });
 
 
-//for the favorite slice error handeling.
+//Slices local storage handeling
 store.subscribe(() => {
+  // Save subjects state to localstorage
   saveSubjectsState(
     store.getState().subjects
   );
@@ -35,8 +36,7 @@ store.subscribe(() => {
     store.getState().posts
   );
 
-  // Save another part of the state to localStorage
-  
+  // save favorites state to localStorage
   saveFavoritesState(
     store.getState().favorites
   );

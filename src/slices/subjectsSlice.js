@@ -27,7 +27,7 @@ export const saveSubjectsState = (state) => {
 };
 
 
-const initialState=subjectsData;
+const initialState = subjectsData;
 
 
 const persistedState = loadState() || initialState;
@@ -67,7 +67,6 @@ const subjectsSlice = createSlice({
       const { subjectId, postId } = action.payload;
       state.byId[subjectId].posts = state.byId[subjectId].posts.filter(id => id !== postId);
     }
-    // Other reducers as needed
   }
 });
 
@@ -89,12 +88,12 @@ export const selectPostsForSubject = (state, subjectId) => {
 
 
 
-export const { 
-  addSubject, 
-  deleteSubject, 
-  updateSubject, 
-  addPostToSubject, 
-  removePostFromSubject 
+export const {
+  addSubject,
+  deleteSubject,
+  updateSubject,
+  addPostToSubject,
+  removePostFromSubject
 } = subjectsSlice.actions;
 
 export default subjectsSlice.reducer;

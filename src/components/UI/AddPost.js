@@ -1,6 +1,3 @@
-// Add button that will add a post.
-
-
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 

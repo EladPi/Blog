@@ -1,4 +1,4 @@
-// slices/userSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const savedState = JSON.parse(localStorage.getItem('user')) || {};
@@ -51,7 +51,6 @@ const userSlice = createSlice({
       }
       localStorage.setItem('user', JSON.stringify(state));
     }
-    // ... potentially more actions
   }
 });
 
@@ -66,7 +65,7 @@ export const selectCurrentUser = state => state.user.currentUser;
 // Check if a specific username is authorized (has registered)
 export const isUsernameAuthorized = (state, username) => {
   console.log(state.user.authorizedUsernames)
-  return   state.user.authorizedUsernames.includes(username);
+  return state.user.authorizedUsernames.includes(username);
 }
 
 

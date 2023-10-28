@@ -1,5 +1,3 @@
-// The Subjects page.
-
 import { selectAllSubjects } from "../slices/subjectsSlice";
 import FullList from "../components/PostsComponents/FullList";
 import { useSelector } from "react-redux";

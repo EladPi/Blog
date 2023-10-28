@@ -1,11 +1,6 @@
-// Remove button in the the post structure. 
-// The user will only be able to delete if the 
-// author is similar to the username.
-
 import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { selectCurrentUser } from "../../slices/userSlice";
-import { deletePost, selectAllPosts } from "../../slices/postsSlice";
+import {useDispatch } from "react-redux";
+import { deletePost } from "../../slices/postsSlice";
 import { removePostFromSubject } from "../../slices/subjectsSlice";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -15,12 +10,10 @@ import '../../styles/RemovePost.css';
 
 const RemovePost = () => {
     const { postId, subjectId, forumId } = useParams();
-    const currentUser = useSelector(selectCurrentUser);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [showMessage, setShowMessage] = useState(false);
     const [hasClicked, setHasClicked] = useState(false);
-    const allPosts = useSelector(selectAllPosts);
 
     const handleDeleteClick = () => {
         setShowMessage(true);
@@ -28,10 +21,10 @@ const RemovePost = () => {
 
     const handleYesClick = () => {
         setHasClicked(true);
-        dispatch(removePostFromSubject({subjectId , postId}))
-        //dispatch(deletePost({ id: postId }));
         setTimeout(() => {
-            navigate(`/${forumId}/subjects/${subjectId}/posts`);
+            navigate(`/${forumId}/${subjectId}`);
+            dispatch(removePostFromSubject({subjectId , postId}))
+            dispatch(deletePost(postId));
             setShowMessage(false);
         }, 3000)
     }

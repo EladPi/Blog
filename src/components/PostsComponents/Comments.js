@@ -17,7 +17,7 @@ const Comments = ({ postId }) => {
     const allPosts = useSelector(selectAllPosts);
 
     const handleCommentSubmit = (event) => {
-        event.preventDefault(); // Prevent default form behavior
+        event.preventDefault();
         if (commentValue.trim() === '') return; // Don't allow empty comments
 
         dispatch(addComment({

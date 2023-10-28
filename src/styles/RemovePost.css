@@ -1,40 +1,37 @@
 .delete-post-message-wholescreen-div {
-    position: fixed; /* Fixed position */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%; /* Cover the entire viewport width */
-    height: 100%; /* Cover the entire viewport height */
-    background-color: rgba(0,0,0,0.7); /* Optional: semi-transparent black background for an overlay effect */
-    z-index: 1000; /* To ensure it stays on top of other elements */
-    display: flex; /* Flexbox to help center the inner div */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Styling for the inner div to be centered in the screen */
 .delete-post-message-div {
-    background-color: aliceblue; /* White background */
-    padding: 20px; /* Some spacing around the content */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.3); /* Optional: a soft shadow around the box */
-    max-width: 80%; /* Maximum width, you can adjust based on your preference */
-    text-align: center; /* To center the text inside */
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    text-align: center;
 }
 
-/* Styling for the buttons */
 .delete-post-message-buttons button {
-    margin: 10px; /* Some spacing around buttons */
-    padding: 10px 20px; /* Spacing inside buttons */
-    border: none; /* Remove default borders */
-    border-radius: 5px; /* Rounded corners for buttons */
-    cursor: pointer; /* Cursor effect for buttons */
-    background-color: #5483B3; /* Blue background, you can adjust the color */
-    transition: background-color 0.2s; 
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5483B3;
+    transition: background-color 0.2s;
 }
 
-/* Hover effect for buttons */
 .delete-post-message-buttons button:hover {
     background-color: #7DA0CA;
 }

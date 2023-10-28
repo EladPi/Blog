@@ -1,4 +1,3 @@
-// slices/commentsSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const savedCommentsState = JSON.parse(localStorage.getItem('comments')) || {};

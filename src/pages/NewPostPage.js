@@ -14,22 +14,32 @@ const NewPostPage = () => {
     const [content, setContent] = useState('');
     const currentUser = useSelector(selectCurrentUser);
     const allPosts = useSelector(selectAllPosts);
-    const allSubjects = useSelector(selectAllSubjects);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {forumId , subjectId} =useParams();
+
+
+    // error handeling on inputs.
+    const [titleTooShort, setTitleTooShort] = useState(false);
+    const [contentTooShort , setContentTooShort] = useState(false);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const newPostId = `post${allPosts.length +1}`;
 
         if(title.length <= 3){
-            alert('Your title is too short.')
+            setTitleTooShort(true);
+            return;
         }
-        else if(content.length <= 5){
-            alert('Your content is too short.')
+
+        if(content.length <= 5){
+            setContentTooShort(true);
+            return;
         }
         else{
+            setTitleTooShort(false);
+            setContentTooShort(false);
             dispatch(addPostToSubject({
                 subjectId,
                 postId: newPostId
@@ -42,7 +52,6 @@ const NewPostPage = () => {
                 author:currentUser
             }));
 
-            console.log(allSubjects)
     
             setTitle('');
             setContent('');
@@ -51,7 +60,6 @@ const NewPostPage = () => {
         }
     };
 
-    console.log(allPosts);
     
     return (
         <>
@@ -68,6 +76,7 @@ const NewPostPage = () => {
                         onChange={e => setTitle(e.target.value)}
                     />
                 </div>
+                {titleTooShort ? <span>Title must contain more than 3 letters.</span> : <></>}
                 <div>
                     <label htmlFor="postContent">Post Content:</label>
                     <textarea 
@@ -76,6 +85,7 @@ const NewPostPage = () => {
                         onChange={e => setContent(e.target.value)}
                     />
                 </div>
+                {contentTooShort ? <span className='newpostpage-contenttooshort'>Content must contain more than 5 letters.</span> : <></>}
                 <button type="submit">Add a Post</button>
             </form>
             }

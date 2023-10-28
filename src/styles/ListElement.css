@@ -11,41 +11,38 @@
   max-height: 100px;
 }
 
-.list-element h3{
+.list-element h3 {
   position: relative;
   top: -20px;
   left: 5px;
   color: #021024;
 }
 
-.item-description{
+.item-description {
   position: relative;
   left: 15px;
   top: -25px;
 
 }
 
-.list-element-link{
+.list-element-link {
   text-decoration: none;
 }
 
-/* Smaller screens: Tablets, some large phones (max-width: 768px) */
 @media only screen and (max-width: 768px) {
   .list-element {
     font-size: 0.9rem;
   }
 }
 
-/* Larger screens: Laptops, Desktops (min-width: 769px) */
 @media only screen and (min-width: 769px) {
   .list-element {
     font-size: 1.1rem;
   }
 }
 
-/* Optional: Hover effect for better UX */
 .list-element:hover {
   background-color: #7DA0CA;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Slightly more prominent shadow on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }

@@ -1,4 +1,4 @@
-// The forums page.
+// The Forums page.
 import FullList from "../components/PostsComponents/FullList";
 import { selectAllForums } from "../slices/forumsSlice";
 import { useSelector } from "react-redux";
