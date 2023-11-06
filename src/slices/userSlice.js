@@ -64,7 +64,6 @@ export const selectCurrentUser = state => state.user.currentUser;
 
 // Check if a specific username is authorized (has registered)
 export const isUsernameAuthorized = (state, username) => {
-  console.log(state.user.authorizedUsernames)
   return state.user.authorizedUsernames.includes(username);
 }
 
